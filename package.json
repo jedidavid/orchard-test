@@ -6,13 +6,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server --port=5500 --no-css-inject",
     "run:css": "npx tailwindcss -i tailwind.css -o ./src/css/styles.css --watch",
-    "start": "concurrently 'npm:serve' 'npm:run:css'"
+    "start": "concurrently 'npm:serve' 'npm:run:css'",
+    "build": "cross-env NODE_ENV=production postcss tailwind.css -o src/css/styles.css"
   },
   "author": "Jeremy David",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.6",
     "live-server": "^1.2.2",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.6"
