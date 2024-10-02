@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/src/fonts/OpenSans_Condensed-Light.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/src/fonts/OpenSans_Condensed-Medium.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/src/fonts/OpenSans_Condensed-SemiBold.ttf) format("ttf");
+  }
+  body {
+    @apply font-light;
+  }
+}
